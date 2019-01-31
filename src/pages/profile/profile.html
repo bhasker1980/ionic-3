@@ -1,0 +1,43 @@
+<ion-content>
+<div class="page-header">
+<h1>Ionic 3 Sample</h1>
+</div>
+
+
+<div class="page-content">
+  <h2>Your Profile Information</h2>
+
+
+<ion-list *ngIf="userData">
+
+    <ion-item>
+    Name: {{userData.name}}
+    </ion-item>
+
+    <ion-item>
+    Email: {{userData.email}}
+    </ion-item>
+
+    <ion-item>
+    Username: {{userData.username}}
+    </ion-item>
+
+<button (click)="signOut()"  type="button" ion-button block color="primary">SIGN OUT</button>
+
+</ion-list>
+
+<ion-list *ngIf="!userData">
+<p>No information found...</p>
+<button (click)="goToRegister()"  type="button" ion-button block color="primary">Register</button>
+
+</ion-list>
+
+
+
+
+
+
+
+
+</div>
+</ion-content>
